@@ -479,7 +479,10 @@ struct PlayerSpectateData
 };
 
 struct IPlayerPool;
-struct IPlayer;
+struct IPlayer
+{
+	virtual bool isLeavingSpectatorMode() const = 0;
+};
 
 /// The player's name status returned when updating their name
 enum EPlayerNameStatus
